@@ -1,3 +1,7 @@
+# Webextensions addon 
+Tested only on Firefox under linux
+May work on Chrome under linux due to the WebExtensions api
+
 #  Linux only at the moment!
 
 ## Setup
