@@ -1,0 +1,27 @@
+{
+    
+    "name": "selection-to-speech@nikolai-ivanov.com",  
+    "description": "Send selected text to native text-to-seach",
+    "version": "1.0",
+    "manifest_version": 2,
+    "icons": {
+        "48": "icons/border-48.png"
+    },
+
+    "background": {
+        "scripts": ["background.js"]
+    },
+
+    "applications": {
+        "gecko": {
+          "id": "selection-to-speech@nikolai-ivanov.com",
+          "strict_min_version": "50.0"
+        }
+    },
+
+      "permissions": [
+            "menus",
+            "nativeMessaging"
+        ]
+    
+    }

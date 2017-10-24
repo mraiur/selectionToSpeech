@@ -1,0 +1,7 @@
+{
+    "name": "selectionToSpeech",
+    "description": "Send selection to speech",
+    "path": "PATH TO APP/app/speek.py",
+    "type": "stdio",
+    "allowed_extensions": [ "selection-to-speech@nikolai-ivanov.com" ]
+}
