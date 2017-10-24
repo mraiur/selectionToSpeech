@@ -17,7 +17,7 @@ try:
         return json.loads(message)
     while True:
         receivedMessage = getMessage()
-        subprocess.call("espeak -vbg-bg+f4 -p30 -s150 '{0}'".format(receivedMessage), shell=True)
+        subprocess.call("espeak -vbg-bg+f4 -g6 -p20 -a150 -k20 -s160 '{0}'".format(receivedMessage), shell=True)
 except AttributeError:
     # Python 2.x version (if sys.stdin.buffer is not defined)
     # Read a message from stdin and decode it.
@@ -44,4 +44,4 @@ except AttributeError:
 
     while True:
         receivedMessage = getMessage()
-        subprocess.call("espeak -vbg-bg+f4 -p30 -s130 {0}".format(receivedMessage), shell=True)
+        subprocess.call("espeak -vbg-bg+f4 -g6 -p20 -a150 -k20 -s160 {0}".format(receivedMessage), shell=True)
