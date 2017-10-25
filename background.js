@@ -14,6 +14,11 @@ function onSuccess(success){
 
 }
 
+function formatText( text )
+{
+	return text.replace(/'/g, "");
+}
+
 browser.menus.create({
     id: "tts",
     title: "Text-to-speach",
@@ -24,7 +29,9 @@ browser.menus.create({
 browser.menus.onClicked.addListener((info, tab) => {
     switch (info.menuItemId) {
         case "tts":
-            var sending = browser.runtime.sendNativeMessage("selectionToSpeech", info.selectionText);
+
+			var formatedSelection = formatText( info.selectionText );
+            var sending = browser.runtime.sendNativeMessage("selectionToSpeech", formatedSelection );
             sending.then(onSuccess, onError);
         break;
     }
