@@ -4,6 +4,10 @@ import json
 import struct
 import subprocess
 
+speakConfigFile = open('./speak.cfg', 'r')
+speakConfig = speakConfigFile.read()
+
+
 # Read a message from stdin and decode it.
 def getMessage():
     rawLength = sys.stdin.buffer.read(4)
@@ -16,5 +20,5 @@ def getMessage():
 
 while True:
     receivedMessage = getMessage()
-    cmd="espeak -vbg-bg+f4 -g6 -p20 -a150 -k20 -s160 '{0}'".format(receivedMessage)
+    cmd=speakConfig.format(receivedMessage)
     subprocess.call( cmd, shell=True )
